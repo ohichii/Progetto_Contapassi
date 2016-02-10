@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-    public class MainActivity extends AppCompatActivity {//ciqo
+    public class MainActivity extends AppCompatActivity {//ciao
 
         DataBaseHelper myDb;
 

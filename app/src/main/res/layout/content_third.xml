@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/layout_padding_top"
+    android:background="@color/back">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:text="Registrazione"
+        android:textSize="@dimen/big_text_size"
+        android:textColor="#644436" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        android:singleLine="true"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Età"
+        android:singleLine="true"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Peso"
+        android:singleLine="true"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Altezza"
+        android:singleLine="true"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sesso"
+        android:singleLine="true"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Step"
+        android:singleLine="true"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:singleLine="true"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/buttonAv"
+
+        android:text="Avanti"
+        android:textColor="#212121"
+        android:textSize="17sp"
+
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_gravity="right" />
+
+
+
+
+
+
+
+
+</LinearLayout>

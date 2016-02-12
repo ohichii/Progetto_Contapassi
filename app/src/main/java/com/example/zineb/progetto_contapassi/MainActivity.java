@@ -13,7 +13,7 @@ import android.widget.Button;
 
     public class MainActivity extends AppCompatActivity {//ciao
 
-        DataBaseHelper myDb;
+        static DataBaseHelper myDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

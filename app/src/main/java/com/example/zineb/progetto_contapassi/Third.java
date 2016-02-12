@@ -2,6 +2,7 @@ package com.example.zineb.progetto_contapassi;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -18,8 +19,10 @@ import org.json.JSONObject;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Third extends Activity implements
-        View.OnClickListener{
+public class Third extends Activity implements View.OnClickListener{
+
+    SharedPreferences sharedpreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,8 @@ public class Third extends Activity implements
                 Bundle bundle = new Bundle();
                 bundle.putString("name", edit_name.getText().toString());
                 bundle.putString("lastname", edit_altezza.getText().toString());
+
+
 
                 JSONObject obj = new JSONObject();
                 try {

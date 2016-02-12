@@ -1,25 +1,24 @@
 package com.example.zineb.progetto_contapassi;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
+import android.content.SharedPreferences;
+
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class Third extends Activity implements
         View.OnClickListener{
+
+    static SharedPreferences sharedpreferences;
+    public static final String MyPREFERENCES = "MyPrefs" ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +27,7 @@ public class Third extends Activity implements
         EditText name = (EditText)findViewById(R.id.name);
         final Button button = (Button) findViewById(R.id.buttonSave);
         button.setOnClickListener(this);
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
     }
 
@@ -36,7 +36,7 @@ public class Third extends Activity implements
 
     public void onClick(View v) {
         // TODO Auto-generated method stub
-        switch ( v.getId() ) {
+        /*switch ( v.getId() ) {
             case R.id.buttonSave:
                 final EditText edit_name = (EditText)findViewById(R.id.name);
                 final EditText edit_age = (EditText)findViewById(R.id.age);
@@ -115,6 +115,41 @@ public class Third extends Activity implements
 
                 break;
         }
-    }
-}
 
+    */
+        final EditText edit_name = (EditText)findViewById(R.id.name);
+        final EditText edit_age = (EditText)findViewById(R.id.age);
+        final EditText edit_peso = (EditText)findViewById(R.id.peso);
+        final EditText edit_altezza = (EditText)findViewById(R.id.altezza);
+        final EditText edit_sesso = (EditText)findViewById(R.id.sex);
+        final EditText edit_step = (EditText)findViewById(R.id.step);
+        final EditText edit_mail = (EditText)findViewById(R.id.mail);
+
+
+        String name = edit_name.getText().toString();
+        String age = edit_age.getText().toString();
+        String peso = edit_peso.getText().toString();
+        String altezza = edit_altezza.getText().toString();
+        String sesso = edit_sesso.getText().toString();
+        String step = edit_step.getText().toString();
+        String mail = edit_mail.getText().toString();
+
+
+
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+
+        editor.putString("Name", name);
+        editor.putString("Age", age);
+        editor.putString("Email", mail);
+        editor.putString("Peso", peso);
+        editor.putString("Altezza", altezza);
+        editor.putString("Sesso", sesso);
+        editor.putString("Step", step);
+        editor.commit();
+        Toast.makeText(Third.this,"Your registration is done",Toast.LENGTH_LONG).show();
+
+
+        Intent intent = new Intent(Third.this, Fourth.class);
+        startActivity(intent);
+}
+}

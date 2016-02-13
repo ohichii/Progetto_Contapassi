@@ -24,11 +24,13 @@
     <string name="email_or_password_empty">"L'adresse email et mot de passe sont obligatoires"</string>
 
     <!-- nomi dei singoli valori di un'attività -->
+    <!--stringhe da sistemare, se metto le lettere accentate non funziona la
+    scrittura/lettura del file JSON perchè uso le stringhe come valore-->
     <string name="title_training">Training</string>
     <string name="name_training">Nome</string>
     <string name="distance">Distanza</string>
-    <string name="speed_avg_total">Velocità media complessiva</string>
-    <string name="speed_avg_meters">Velocità media sugli ultimi X metri</string>
+    <string name="speed_avg_total">Velocita media complessiva</string>
+    <string name="speed_avg_meters">Velocita media sugli ultimi X metri</string>
     <string name="rhythm_avg_total">Ritmo medio</string>
     <string name="rhythm_avg_meters">Ritmo medio sugli ultimi X metri</string>
 

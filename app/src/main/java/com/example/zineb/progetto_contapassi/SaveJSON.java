@@ -72,12 +72,8 @@ public class SaveJSON extends Activity {
     }
 
     public void readJSON() throws IOException, JSONException {
-        FileInputStream fis = null;
-        try {
-            fis = openFileInput(nameTraining);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+
+        FileInputStream fis = openFileInput(nameTraining);
         BufferedInputStream bis = new BufferedInputStream(fis);
         StringBuffer b = new StringBuffer();
 
@@ -88,9 +84,7 @@ public class SaveJSON extends Activity {
         bis.close();
         fis.close();
 
-        //JSONArray training = new JSONArray(b.toString());
         JSONObject training = new JSONObject(String.valueOf(b));
-        //StringBuffer dataBuffer = new StringBuffer();
 
         String distance = training.getString(this.getString(R.string.distance));
         String sat = training.getString(this.getString(R.string.speed_avg_total));
@@ -111,14 +105,5 @@ public class SaveJSON extends Activity {
         tSAM.setText(sam);
         tRAT.setText(rat);
         tRAM.setText(ram);
-
-        /*String data = null;
-        for (int i=0; i<training.length(); i++) {
-            TextView tName = (TextView) findViewById(R.id.TextViewName);
-            tName.setText(training.getJSONObject());
-
-            data = training.getJSONObject(i).getString("Valore");
-            dataBuffer.append("Valore " + (i+1) + ": " + data + "\n");
-        }*/
     }
 }

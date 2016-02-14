@@ -2,7 +2,12 @@ package com.example.zineb.progetto_contapassi;
 
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,7 +21,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class SaveJSON extends Activity {
+public class SaveJSON extends Activity implements View.OnClickListener {
     // variabili che contengono i dati dell'allenamento (temporaneo)
     private String nameTraining = "Esempio Allenamento";
     private double DISTANCE = 10;
@@ -25,11 +30,14 @@ public class SaveJSON extends Activity {
     private double RAT = 09.01;
     private double RAM = 10;
 
+    private String emailAddress = null;
+
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.savejson);
 
+        // creazione e lettura file JSON
         try {
             // richiama la funzione per creare il file JSON
             createJSON();
@@ -48,6 +56,11 @@ public class SaveJSON extends Activity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        // invio email
+        EditText EditTextEmailAddress = (EditText) findViewById(R.id.EditTextEmailAddress);
+        Button bntSendEmail = (Button) findViewById(R.id.bntSendEmail);
+        bntSendEmail.setOnClickListener(this);
     }
 
     public void createJSON() throws IOException, JSONException {
@@ -105,5 +118,46 @@ public class SaveJSON extends Activity {
         tSAM.setText(sam);
         tRAT.setText(rat);
         tRAM.setText(ram);
+    }
+
+    public boolean sendEmail(View v, String indirizzo) {
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("message/rfc822");
+        // destinatario
+        i.putExtra(Intent.EXTRA_EMAIL, new String[]{indirizzo});
+        // oggetto
+        i.putExtra(Intent.EXTRA_SUBJECT, "Prova invio file JSON");
+        // testo email
+        i.putExtra(Intent.EXTRA_TEXT, "Questa è una prova, scusa.");
+        // allegato
+        //Uri attachment = Uri.parse("file:///sdcard/Pictures/cape.jpg");
+        // non funziona perchè non so dove salva il file
+        // non importante perchè dovrà essere estratto dal database
+        //Uri attachment = Uri.parse(valName);
+
+        //i.putExtra(Intent.EXTRA_STREAM, attachment);
+
+        try {
+            startActivity(Intent.createChooser(i, "Send mail..."));
+            return true;
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.bntSendEmail:
+                //inviare email (manca allegato)
+                EditText etxtemail = (EditText) findViewById(R.id.EditTextEmailAddress);
+                emailAddress = etxtemail.getText().toString();
+                Toast.makeText(this, emailAddress, Toast.LENGTH_SHORT).show();
+                if (!sendEmail(v, emailAddress)) {
+                    Toast.makeText(this, "Errore: email non inviata!", Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
     }
 }

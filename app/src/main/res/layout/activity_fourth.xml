@@ -16,4 +16,12 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="144dp" />
+
+    <!--test JSON-->
+    <Button
+        android:id="@+id/buttonTestJSON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test JSON"/>
+    <!--test JSON-->
 </RelativeLayout>

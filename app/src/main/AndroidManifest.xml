@@ -2,18 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zineb.progetto_contapassi"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,17 +23,34 @@
         <activity
             android:name=".Second"
             android:label="@string/title_activity_second"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Third"
             android:label="@string/title_activity_third"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DatabaseTest"
+            android:label="@string/title_activity_database_test"
+            android:parentActivityName=".Third">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.zineb.progetto_contapassi.Third" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Fourth"
-            android:label="@string/title_activity_fourth" >
-        </activity>
+            android:label="@string/title_activity_fourth"></activity>
+
+        <!-- activity che mostra i dati e permette la condivisione via email -->
+        <activity
+            android:name=".SaveJSON"
+            android:label="@string/title_training"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

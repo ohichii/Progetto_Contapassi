@@ -1,13 +1,19 @@
 package com.example.zineb.progetto_contapassi;
 
+<<<<<<< HEAD
+=======
 import android.app.AlertDialog;
 import android.database.Cursor;
+>>>>>>> origin/master
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
+=======
 import android.widget.Toast;
+>>>>>>> origin/master
 
 public class DatabaseTest extends Activity {
 
@@ -20,12 +26,19 @@ public class DatabaseTest extends Activity {
     EditText x_stepsET;
 
     Button btnAddSession;
+<<<<<<< HEAD
+=======
     Button btnShowAll;
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_database_test);
+<<<<<<< HEAD
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+=======
+>>>>>>> origin/master
 
         nameSessionET = (EditText) findViewById(R.id.nameSessionET);
         jasonFileET = (EditText) findViewById(R.id.jasonfileET);
@@ -34,11 +47,17 @@ public class DatabaseTest extends Activity {
         stepsET = (EditText) findViewById(R.id.stepsET);
         x_speedET = (EditText) findViewById(R.id.x_speedET);
         x_stepsET = (EditText) findViewById(R.id.x_stepsET);
+<<<<<<< HEAD
+=======
         btnAddSession = (Button) findViewById(R.id.btnSave);
         btnShowAll = (Button) findViewById(R.id.btnshow);
 
         addSession();
+<<<<<<< HEAD
         showAll();
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
     }
 
     public void addSession(){
@@ -46,22 +65,31 @@ public class DatabaseTest extends Activity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+<<<<<<< HEAD
+                        MainActivity.myDb.insertData(nameSessionET.getText().toString(),
+=======
                         boolean isInserted = MainActivity.myDb.insertData(nameSessionET.getText().toString(),
+>>>>>>> origin/master
                                                      jasonFileET.getText().toString(),
                                                     dateET.getText().toString(),
                                                     Double.parseDouble(speedET.getText().toString()),
                                                     Integer.parseInt(stepsET.getText().toString()),
                                                     Double.parseDouble(x_speedET.getText().toString()),
                                                     Integer.parseInt(x_stepsET.getText().toString()));
+<<<<<<< HEAD
+=======
                         if(isInserted){
                             Toast.makeText(DatabaseTest.this,"Session Saved",Toast.LENGTH_LONG).show();
                         }else {
                             Toast.makeText(DatabaseTest.this,"OOPS, Session NOT Saved",Toast.LENGTH_LONG).show();
                         }
+>>>>>>> origin/master
                     }
                 }
         );
     }
+<<<<<<< HEAD
+=======
     public void showAll(){
         btnShowAll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,5 +124,6 @@ public class DatabaseTest extends Activity {
         builder.setMessage(message);
         builder.show();
     }
+>>>>>>> origin/master
 
 }

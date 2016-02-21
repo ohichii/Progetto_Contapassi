@@ -18,8 +18,9 @@ public class Fourth extends Activity implements View.OnClickListener {
 
         final TextView text = (TextView)findViewById(R.id.textView);
         String nom = Third.sharedpreferences.getString("Name", null);
+        Boolean valeur = MainActivity.sharedFirstTime.getBoolean("FirstTime",true);
 
-        text.setText(nom);
+        text.setText(nom +" "+ valeur);
 
         // test JSON
         Button bnt = (Button) findViewById(R.id.buttonTestJSON);

@@ -1,6 +1,10 @@
 package com.example.zineb.progetto_contapassi;
 
 import android.app.Activity;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,24 +30,53 @@ public class MainActivity extends Activity implements Runnable {
    // boolean a = prefs.getBoolean(REGISTRATION_DATA, true);
     boolean b = true;
 
+<<<<<<< HEAD
 
 
 
+
+        static SharedPreferences sharedFirstTime;
+        public static final String MyPREF = "FirstTime" ;
+=======
+
+
+
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+         sharedFirstTime = getSharedPreferences(MyPREF, Context.MODE_PRIVATE);
+         SharedPreferences.Editor editor = sharedFirstTime.edit();
+
+         editor.putBoolean("FirstTime", false);
+         editor.commit();
+
+
+
+=======
+>>>>>>> origin/master
         myDb = new DataBaseHelper(this);
+>>>>>>> origin/master
         Button bnt = (Button)findViewById(R.id.buttonWelc);
         bnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Second.class);
-                startActivity(intent);
+               if(sharedFirstTime.equals(true))
+                startActivity(new Intent(MainActivity.this, Fourth.class));
+
+                startActivity(new Intent(MainActivity.this, Second.class));
             }
         });
+<<<<<<< HEAD
+=======
         Button dbTest = (Button) findViewById(R.id.dbTest);
         dbTest.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -53,13 +86,38 @@ public class MainActivity extends Activity implements Runnable {
             }
         });
 
+<<<<<<< HEAD
         Handler mHandler = new Handler();
         mHandler.postDelayed(this, 2500);
 
         //myDb = new DataBaseHelper(this);
 
+=======
+>>>>>>> origin/master
+=======
+        Handler mHandler = new Handler();
+        mHandler.postDelayed(this, 2500);
+
+<<<<<<< HEAD
+>>>>>>> origin/master
+        myDb = new DataBaseHelper(this);
+
+<<<<<<< HEAD
+
+
+    }
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+            // Inflate the menu; this adds items to the action bar if it is present.
+            getMenuInflater().inflate(R.menu.menu_main, menu);
+=======
+=======
+        myDb = new DataBaseHelper(this);
+>>>>>>> origin/master
+>>>>>>> origin/master
     }
 
+>>>>>>> origin/master
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -76,6 +134,10 @@ public class MainActivity extends Activity implements Runnable {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
             return true;
         }
 

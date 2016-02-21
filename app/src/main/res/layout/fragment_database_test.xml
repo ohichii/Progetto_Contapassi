@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment"
-    android:name="com.example.zineb.progetto_contapassi.DatabaseTestFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:layout="@layout/fragment_database_test" />
-=======
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -54,8 +45,7 @@
         android:id="@+id/dateET"
         android:layout_below="@+id/nameSessionET"
         android:layout_alignLeft="@+id/nameSessionET"
-        android:layout_alignStart="@+id/nameSessionET"
-        android:inputType="date" />
+        android:layout_alignStart="@+id/nameSessionET" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -141,24 +131,4 @@
         android:layout_alignLeft="@+id/x_speedET"
         android:layout_alignStart="@+id/x_speedET"
         android:layout_below="@+id/x_speedET" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        android:id="@+id/btnSave"
-        android:layout_below="@+id/x_stepsET"
-        android:layout_toRightOf="@+id/x_stepsTV"
-        android:layout_toEndOf="@+id/x_stepsTV"
-        android:layout_marginTop="31dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="show Sessions"
-        android:id="@+id/btnshow"
-        android:layout_alignTop="@+id/btnSave"
-        android:layout_toRightOf="@+id/x_stepsET"
-        android:layout_toEndOf="@+id/x_stepsET" />
 </RelativeLayout>
->>>>>>> origin/master

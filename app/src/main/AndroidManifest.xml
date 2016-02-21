@@ -23,23 +23,29 @@
         <activity
             android:name=".Second"
             android:label="@string/title_activity_second"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Third"
             android:label="@string/title_activity_third"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DatabaseTest"
-            android:label="@string/title_activity_database_test"></activity>
+            android:label="@string/title_activity_database_test" />
         <activity
             android:name=".Fourth"
-            android:label="@string/title_activity_fourth"></activity>
+            android:label="@string/title_activity_fourth" />
 
         <!-- activity che mostra i dati e permette la condivisione via email -->
         <activity
             android:name=".SaveJSON"
             android:label="@string/title_training"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Session"
+            android:label="@string/title_activity_session" />
+        <activity
+            android:name=".SessionsList"
+            android:label="@string/title_activity_sessions_list"></activity>
     </application>
 
 </manifest>

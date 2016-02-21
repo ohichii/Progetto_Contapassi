@@ -34,7 +34,7 @@ public class MainActivity extends Activity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
+
         myDb = new DataBaseHelper(this);
         Button bnt = (Button)findViewById(R.id.buttonWelc);
         bnt.setOnClickListener(new View.OnClickListener() {
@@ -53,12 +53,11 @@ public class MainActivity extends Activity implements Runnable {
             }
         });
 
-=======
         Handler mHandler = new Handler();
         mHandler.postDelayed(this, 2500);
 
-        myDb = new DataBaseHelper(this);
->>>>>>> origin/master
+        //myDb = new DataBaseHelper(this);
+
     }
 
     @Override

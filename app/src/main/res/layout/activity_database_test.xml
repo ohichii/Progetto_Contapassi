@@ -45,7 +45,8 @@
         android:id="@+id/dateET"
         android:layout_below="@+id/nameSessionET"
         android:layout_alignLeft="@+id/nameSessionET"
-        android:layout_alignStart="@+id/nameSessionET" />
+        android:layout_alignStart="@+id/nameSessionET"
+        android:inputType="date" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -146,7 +147,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="show Sessions"
-        android:id="@+id/btnShow"
+        android:id="@+id/btnshow"
         android:layout_alignTop="@+id/btnSave"
         android:layout_toRightOf="@+id/x_stepsET"
         android:layout_toEndOf="@+id/x_stepsET" />

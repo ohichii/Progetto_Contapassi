@@ -35,9 +35,10 @@ public class DatabaseTest extends Activity {
         x_speedET = (EditText) findViewById(R.id.x_speedET);
         x_stepsET = (EditText) findViewById(R.id.x_stepsET);
         btnAddSession = (Button) findViewById(R.id.btnSave);
-        btnShowAll = (Button) findViewById(R.id.btnShow);
+        btnShowAll = (Button) findViewById(R.id.btnshow);
 
         addSession();
+        showAll();
     }
 
     public void addSession(){

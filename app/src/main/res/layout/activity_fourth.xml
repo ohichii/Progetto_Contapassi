@@ -16,9 +16,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="144dp" />
-<<<<<<< HEAD
-</RelativeLayout>
-=======
 
     <!--test JSON-->
     <Button
@@ -28,4 +25,4 @@
         android:text="Test JSON"/>
     <!--test JSON-->
 </RelativeLayout>
->>>>>>> origin/master
+

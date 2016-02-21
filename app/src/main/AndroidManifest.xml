@@ -30,6 +30,7 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".DatabaseTest"
+<<<<<<< HEAD
             android:label="@string/title_activity_database_test"
             android:parentActivityName=".Third">
             <meta-data
@@ -42,6 +43,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+=======
+            android:label="@string/title_activity_database_test"></activity>
+>>>>>>> origin/master
         <activity
             android:name=".Fourth"
             android:label="@string/title_activity_fourth"></activity>

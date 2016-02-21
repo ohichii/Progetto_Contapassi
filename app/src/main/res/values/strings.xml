@@ -22,6 +22,7 @@
     <string name="hint_pass">"Ici : Le mot de passe de l'utilisateur"</string>
     <string name="email_format_error">"Le champs email ne correspond pas au format d'une adresse mail"</string>
     <string name="email_or_password_empty">"L'adresse email et mot de passe sont obligatoires"</string>
+<<<<<<< HEAD
 
     <!-- nomi dei singoli valori di un'attività -->
     <!--stringhe da sistemare, se metto le lettere accentate non funziona la
@@ -40,4 +41,31 @@
     <string name="title_activity_fourth">Fourth</string>
     <string name="title_activity_inter">inter</string>
 
+=======
+<<<<<<< HEAD
+    <string name="title_activity_database_test">DatabaseTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_fourth">Fourth</string>
+    <string name="title_activity_inter">inter</string>
+=======
+
+    <!-- nomi dei singoli valori di un'attività -->
+    <!--stringhe da sistemare, se metto le lettere accentate non funziona la
+    scrittura/lettura del file JSON perchè uso le stringhe come valore-->
+    <string name="title_training">Training</string>
+    <string name="name_training">Nome</string>
+    <string name="distance">Distanza</string>
+    <string name="speed_avg_total">Velocita media complessiva</string>
+    <string name="speed_avg_meters">Velocita media sugli ultimi X metri</string>
+    <string name="rhythm_avg_total">Ritmo medio</string>
+    <string name="rhythm_avg_meters">Ritmo medio sugli ultimi X metri</string>
+
+    <string name="title_activity_database_test">DatabaseTest</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_fourth">Fourth</string>
+    <string name="title_activity_inter">inter</string>
+
+>>>>>>> origin/master
+>>>>>>> origin/master
 </resources>

@@ -4,7 +4,17 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+<<<<<<< HEAD
 import android.net.Uri;
+=======
+<<<<<<< HEAD
+
+import android.net.Uri;
+
+=======
+import android.net.Uri;
+>>>>>>> origin/master
+>>>>>>> origin/master
 import android.os.Bundle;
 
 import android.view.View;
@@ -15,7 +25,14 @@ import android.widget.Toast;
 
 
 public class Third extends Activity implements View.OnClickListener{
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+
+=======
+>>>>>>> origin/master
     static SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs" ;
 

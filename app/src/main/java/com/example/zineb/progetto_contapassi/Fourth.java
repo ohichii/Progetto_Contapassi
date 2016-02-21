@@ -15,8 +15,9 @@ public class Fourth extends Activity {
 
         final TextView text = (TextView)findViewById(R.id.textView);
         String nom = Third.sharedpreferences.getString("Name", null);
+        Boolean valeur = MainActivity.sharedFirstTime.getBoolean("FirstTime",true);
 
-        text.setText(nom);
+        text.setText(nom +" "+ valeur);
 
     }
 

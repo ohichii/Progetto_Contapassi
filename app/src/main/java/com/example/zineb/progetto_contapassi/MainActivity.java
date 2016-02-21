@@ -1,6 +1,8 @@
 package com.example.zineb.progetto_contapassi;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,21 +17,37 @@ import android.widget.Button;
 
         DataBaseHelper myDb;
 
+        static SharedPreferences sharedFirstTime;
+        public static final String MyPREF = "FirstTime" ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+         sharedFirstTime = getSharedPreferences(MyPREF, Context.MODE_PRIVATE);
+         SharedPreferences.Editor editor = sharedFirstTime.edit();
+
+         editor.putBoolean("FirstTime", false);
+         editor.commit();
+
+
+
         Button bnt = (Button)findViewById(R.id.buttonWelc);
-        bnt.setOnClickListener(new View.OnClickListener(){
+        bnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Second.class);
-                startActivity(intent);
+               if(sharedFirstTime.equals(true))
+                startActivity(new Intent(MainActivity.this, Fourth.class));
+
+                startActivity(new Intent(MainActivity.this, Second.class));
             }
         });
         myDb = new DataBaseHelper(this);
-    }
 
+
+
+    }
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             // Inflate the menu; this adds items to the action bar if it is present.

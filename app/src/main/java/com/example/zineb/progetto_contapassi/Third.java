@@ -137,8 +137,9 @@ public class Third extends Activity implements
 
 
         SharedPreferences.Editor editor = sharedpreferences.edit();
+        SharedPreferences.Editor editor2 = MainActivity.sharedFirstTime.edit();
 
-        editor.putString("Name", name);
+                editor.putString("Name", name);
         editor.putString("Age", age);
         editor.putString("Email", mail);
         editor.putString("Peso", peso);
@@ -146,7 +147,12 @@ public class Third extends Activity implements
         editor.putString("Sesso", sesso);
         editor.putString("Step", step);
         editor.commit();
-        Toast.makeText(Third.this,"Your registration is done",Toast.LENGTH_LONG).show();
+
+        editor2.putBoolean("FirstTime", true);
+        editor2.commit();
+
+        Toast.makeText(Third.this, "Your registration is done", Toast.LENGTH_LONG).show();
+
 
 
         Intent intent = new Intent(Third.this, Fourth.class);

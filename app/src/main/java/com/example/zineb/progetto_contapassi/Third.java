@@ -4,11 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-<<<<<<< HEAD
-import android.net.Uri;
-=======
 
->>>>>>> origin/master
+import android.net.Uri;
+
 import android.os.Bundle;
 
 import android.view.View;
@@ -19,8 +17,6 @@ import android.widget.Toast;
 
 
 public class Third extends Activity implements View.OnClickListener{
-
-    SharedPreferences sharedpreferences;
 
 
     static SharedPreferences sharedpreferences;

@@ -19,15 +19,24 @@ import android.widget.Button;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myDb = new DataBaseHelper(this);
         Button bnt = (Button)findViewById(R.id.buttonWelc);
-        bnt.setOnClickListener(new View.OnClickListener(){
+        bnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Second.class);
                 startActivity(intent);
             }
         });
-        myDb = new DataBaseHelper(this);
+        Button dbTest = (Button) findViewById(R.id.dbTest);
+        dbTest.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DatabaseTest.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
         @Override

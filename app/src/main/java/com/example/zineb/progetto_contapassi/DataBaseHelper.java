@@ -2,6 +2,7 @@ package com.example.zineb.progetto_contapassi;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -28,8 +29,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table "+TABLE_NAME+" (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, JASON_FILE TEXT," +
-                    " DATE_SESSION DATE, SPEED DOUBLE, STEPS INTEGER, X_SPEED DOUBLE, X_STEPS INTEGER)");
+        db.execSQL("create table " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, JASON_FILE TEXT," +
+                " DATE_SESSION DATE, SPEED DOUBLE, STEPS INTEGER, X_SPEED DOUBLE, X_STEPS INTEGER)");
     }
 
     @Override
@@ -56,5 +57,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         else
             return true;
 
+    }
+
+    public Cursor getAllData(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+TABLE_NAME, null);
+        return res;
     }
 }

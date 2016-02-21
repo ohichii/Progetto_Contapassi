@@ -33,8 +33,13 @@
             android:label="@string/title_activity_database_test"></activity>
         <activity
             android:name=".Fourth"
-            android:label="@string/title_activity_fourth" >
-        </activity>
+            android:label="@string/title_activity_fourth"></activity>
+
+        <!-- activity che mostra i dati e permette la condivisione via email -->
+        <activity
+            android:name=".SaveJSON"
+            android:label="@string/title_training"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
